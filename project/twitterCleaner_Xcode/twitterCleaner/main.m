@@ -24,12 +24,15 @@ int main(int argc, const char * argv[])
                 NSLog(@"ok block, %@",twitter);
                 
                 for (NSString *userId in ids) {
-                    [twitter postFriendshipsDestroyScreenName:nil orUserID:userId successBlock:^(NSDictionary *unfollowedUser) {
+                    /*[twitter postFriendshipsDestroyScreenName:nil orUserID:userId successBlock:^(NSDictionary *unfollowedUser) {
                         NSLog(@"unfollowed UserId %@ ",userId);
 
                     } errorBlock:^(NSError *error) {
                         NSLog(@"errorBlock %@",error);
                     }];
+                     */
+                    NSLog(@"unfollowed UserId %@ ",userId);
+
                 }
 
             } errorBlock:^(NSError *error) {
