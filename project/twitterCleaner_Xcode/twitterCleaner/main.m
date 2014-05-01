@@ -20,7 +20,7 @@ int main(int argc, const char * argv[])
         [twitter verifyCredentialsWithSuccessBlock:^(NSString *username) {
             NSLog(@"ok block, %@",twitter);
             
-            [twitter getFriendsIDsForUserID:nil orScreenName:@"leverdeterre" cursor:@"-1" count:@"1000" successBlock:^(NSArray *ids, NSString *previousCursor, NSString *nextCursor) {
+            [twitter getFriendsIDsForUserID:nil orScreenName:twitter.userName cursor:@"-1" count:@"1000" successBlock:^(NSArray *ids, NSString *previousCursor, NSString *nextCursor) {
                 NSLog(@"ok block, %@",twitter);
                 
                 for (NSString *userId in ids) {
